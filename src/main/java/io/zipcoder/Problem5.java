@@ -16,11 +16,36 @@ public class Problem5 {
         }
 
         string = string.split("::")[1];
-       // return string;
+
        string = string.substring(0,1).toUpperCase()+ string.substring(1,string.length()-1)
                 + string.substring(string.length()-1,string.length()).toLowerCase();
         return string;
     }
+
+    public String editStringFirstCapitalLetter(String string){
+
+        string = reverseCapitalizeString(string);
+
+         for(int i =1; i<string.length()-1; i++){
+
+            if(string.charAt(i) == ' '){
+
+               string = string.split(" ")[i];
+                string = string.substring(0,1).toUpperCase()+ string.substring(1,string.length()-1)
+                        + string.substring(string.length()-1,string.length()).toLowerCase();
+
+
+            }
+
+
+
+         }
+         return string ;
+
+
+    }
+
+
 
 
 }
