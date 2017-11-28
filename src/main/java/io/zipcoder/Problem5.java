@@ -1,33 +1,26 @@
 package io.zipcoder;
 
-import java.util.stream.Stream;
+
 
 public class Problem5 {
 
 // I dont know how to make this work without using built in methods
 
-    public Character returnCharInAString(String string){
 
+    public  String reverseCapitalizeString(String string) {
 
-        for(int i=0; i<string.length()-1; i++){
+        string += ":";
 
+        for (int i = string.length() - 1; i >= 0; i--) {
+           string+= string.charAt(i);
         }
 
-
-
-    }
-
-
-
-
-
-
-    public static String reverseCapitalizeString(String string){
-
-
-        Stream.Builder
-
-
+        string = string.split("::")[1];
+       // return string;
+       string = string.substring(0,1).toUpperCase()+ string.substring(1,string.length()-1)
+                + string.substring(string.length()-1,string.length()).toLowerCase();
         return string;
     }
+
+
 }

@@ -1,17 +1,22 @@
 package io.zipcoder;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Problem5Test {
-    Problem5 problem5 = new Problem5();
+
 
     //output = Gnitest TINU Eovl I
 
+@Test
+    public  void reverseStringTest(){
+    Problem5 problem5 = new Problem5();
 
-    public static void reverseStringTest(){
+        String input = "Testing";
 
-        String input = "I love UNIT Testing";
+        String expected = "Gnitest";
 
-        String expected ="Gnitest TINU Eovl I";
-
-        String actual =  Problem5.reverseCapitalizeString(input);
+        String actual =  problem5.reverseCapitalizeString(input);
+    Assert.assertEquals(expected,actual);
     }
 }
